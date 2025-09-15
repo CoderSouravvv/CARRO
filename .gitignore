@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Data and model artifacts
+data/*.csv
+model/*.joblib
+model/metrics.json
+
+# Streamlit and caches
+.streamlit/
+*.log
