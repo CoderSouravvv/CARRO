@@ -16,7 +16,7 @@ Predict next-term dropout risk, explain why, and recommend interventions — wit
 4. uvicorn src.service:app --reload --host 0.0.0.0 --port 8000
 5. streamlit run src/demo_app.py
 
-## Judge demo flow
+## demo flow
 - Show `data/student_term.csv` sample rows.
 - Run training; point to ROC AUC, Brier, and top drivers.
 - Hit `/score` with a risky profile to see risk and top factors.
