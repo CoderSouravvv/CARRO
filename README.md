@@ -1,4 +1,4 @@
-# AI-based student dropout early warning (SIH prototype)
+# AI-based student dropout early warning :
 
 Predict next-term dropout risk, explain why, and recommend interventions — with counselling log integration.
 
