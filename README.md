@@ -1,28 +1,73 @@
-# AI-based student dropout early warning :
+# 🎓 AI-Based Dropout Prediction System
 
-Predict next-term dropout risk, explain why, and recommend interventions — with counselling log integration.
+An explainable, counselling-aware early warning system to predict student dropout risk and suggest targeted interventions. Built for Smart India Hackathon 2025.
 
-## What this demo includes
-- Calibrated probabilities and interpretable drivers.
-- Counselling log features: sessions, recency gap, and notes score.
-- Live FastAPI scoring endpoint.
-- Streamlit UI with sliders and adaptive interventions.
-- Optional fairness audit across groups.
+---
 
-## How to run
-1. pip install -r requirements.txt
-2. python src/generate_data.py
-3. python src/train.py
-4. uvicorn src.service:app --reload --host 0.0.0.0 --port 8000
-5. streamlit run src/demo_app.py
+## 🚀 Features
 
-## demo flow
-- Show `data/student_term.csv` sample rows.
-- Run training; point to ROC AUC, Brier, and top drivers.
-- Hit `/score` with a risky profile to see risk and top factors.
-- Use the UI sliders; watch risk and interventions change.
-- (Optional) Run `src/fairness_audit.py` and discuss thresholds.
+- 🔍 **Risk Scoring Engine** – Calibrated logistic regression with feature-level impact analysis
+- 🧠 **Counselling-Aware Inputs** – Includes emotional and behavioral indicators from counselling logs
+- 📊 **Explainability** – Top 5 contributing features per student, with direction and impact
+- ⚖️ **Fairness Audit** – Evaluates model bias across student groups (e.g., urban vs rural)
+- 🖥️ **Streamlit UI** – Interactive sliders, live risk score, and intervention suggestions
+- 🧪 **Synthetic Data Generator** – Realistic student profiles with dropout labels
+- 🔌 **FastAPI Service** – Real-time scoring via REST API
+- 🧰 **Reproducible Build** – One-command setup with version-agnostic compatibility
+- 📜 **MIT License** – Clear, permissive licensing for demo and reuse
 
-## Notes
-- Sensitive attributes are excluded from training; used only for auditing.
-- Human-in-the-loop: scores inform advisors; they decide actions.
+---
+
+## 📂 Project Structure
+├── data/ # Synthetic dataset 
+├── model/ # Trained model, scaler, metrics 
+├── src/ 
+│ ├── generate_data.py # Creates student_term.csv 
+│ ├── train.py # Trains model and saves artifacts 
+│ ├── service.py # FastAPI scoring service 
+│ ├── demo_app.py # Streamlit UI 
+│ ├── fairness_audit.py # Bias analysis
+│ └── utils.py  #Shared functions #Python dependencies
+├── requirements.txt  #Python dependencies
+├── LICENSE  #MIT License
+└── README.md 
+
+
+---
+ ⚙️ Setup & Build
+
+1. Clone the repo
+```bash
+git clone https://github.com/your-username/CARRO.git
+cd CARRO
+
+2. Create and activate virtual environment :
+python -m venv .venv
+source .venv/Scripts/activate  # Windows Git Bash
+
+3. Install dependencies :
+pip install -r requirements.txt
+
+4. Build the system (generate data + train model) :
+python src/generate_data.py && python src/train.py
+
+🧪 Run the Demo
+🔌 Start the API
+docs
+
+🖥️ Launch the UI :
+python -m streamlit run src/demo_app.py
+
+📊 Fairness Audit (Optional) :
+python src/fairness_audit.py
+
+
+📜 License
+This project is licensed under the MIT License. You are free to use, modify, and distribute this software with proper attribution.
+
+.
+
+🙌 Acknowledgements
+Developed by Team Urecon.
+Project Name: CARRO – Counselling-Aware Risk and Retention Optimizer
+Smart India Hackathon 2025 – Software Edition
