@@ -1,4 +1,4 @@
-# 🎓 AI-Based Dropout Prediction System
+# 🎓 CARRO 
 
 An explainable, counselling-aware early warning system to predict student dropout risk and suggest targeted interventions. Built for Smart India Hackathon 2025.
 
