@@ -35,37 +35,39 @@ An explainable, counselling-aware early warning system to predict student dropou
 
 ---
  ⚙️ Setup & Build
+ 1. Clone the repo :
+    ```bash
+ git clone https://github.com/your-username/dropout-predictor.git
+ cd dropout-predictor
+   
+ 2. Create and activate virtual environment :
+    python -m venv .venv
+    source .venv/Scripts/activate  # Windows Git Bash
 
-1. Clone the repo
-```bash
-git clone https://github.com/your-username/CARRO.git
-cd CARRO
+ 3. Install dependencies :
+    pip install -r requirements.txt
 
-2. Create and activate virtual environment :
-python -m venv .venv
-source .venv/Scripts/activate  # Windows Git Bash
+ 4. Build the system (generate data + train model) :
+    python src/generate_data.py && python src/train.py
 
-3. Install dependencies :
-pip install -r requirements.txt
-
-4. Build the system (generate data + train model) :
-python src/generate_data.py && python src/train.py
 
 🧪 Run the Demo
 🔌 Start the API
-docs
+ python -m uvicorn src.service:app --reload --host 0.0.0.0 --port 8000
 
-🖥️ Launch the UI :
-python -m streamlit run src/demo_app.py
 
-📊 Fairness Audit (Optional) :
-python src/fairness_audit.py
+ 🖥️ Launch the UI : 
+ python -m streamlit run src/demo_app.py
+
+
+ 📊 Fairness Audit (Optional) :
+ python src/fairness_audit.py
 
 
 📜 License
-This project is licensed under the MIT License. You are free to use, modify, and distribute this software with proper attribution.
+ This project is licensed under the MIT License. You are free to use, modify, and distribute this software with proper attribution.
 
-.
+
 
 🙌 Acknowledgements
 Developed by Team Urecon.
