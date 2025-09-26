@@ -36,8 +36,7 @@ An explainable, counselling-aware early warning system to predict student dropou
 ---
  ⚙️ Setup & Build
  1. Clone the repo :
-    ```bash
-git clone https://github.com/your-username/dropout-predictor.git
+    ```bashgit clone https://github.com/your-username/dropout-predictor.git
 cd dropout-predictor
    
  2. Create and activate virtual environment :
@@ -52,7 +51,7 @@ cd dropout-predictor
 
 
 🧪 Run the Demo
-🔌 Start the API
+🔌 Start the API:
  python -m uvicorn src.service:app --reload --host 0.0.0.0 --port 8000
 
 
