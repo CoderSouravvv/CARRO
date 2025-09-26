@@ -36,8 +36,8 @@ An explainable, counselling-aware early warning system to predict student dropou
 ---
  ⚙️ Setup & Build
  1. Clone the repo :
-    ```bashgit clone https://github.com/your-username/dropout-predictor.git
-cd dropout-predictor
+    ```bash
+    git clone https://github.com/your-username/dropout-predictor.gitcd dropout-predictor
    
  2. Create and activate virtual environment :
     python -m venv .venv
