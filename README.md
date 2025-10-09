@@ -18,57 +18,57 @@ An explainable, counselling-aware early warning system to predict student dropou
 
 ---
 
-## 📂 Project Structure
-├── data/ # Synthetic dataset 
-├── model/ # Trained model, scaler, metrics 
-├── src/ 
-│ ├── generate_data.py # Creates student_term.csv 
-│ ├── train.py # Trains model and saves artifacts 
-│ ├── service.py # FastAPI scoring service 
-│ ├── demo_app.py # Streamlit UI 
-│ ├── fairness_audit.py # Bias analysis
-│ └── utils.py  #Shared functions #Python dependencies
-├── requirements.txt  #Python dependencies
-├── LICENSE  #MIT License
-└── README.md 
+## 📂 Project Structure 
+-├── data/ # Synthetic dataset 
+-├── model/ # Trained model, scaler, metrics 
+-├── src/ 
+-│ ├── generate_data.py # Creates student_term.csv 
+-│ ├── train.py # Trains model and saves artifacts 
+-│ ├── service.py # FastAPI scoring service 
+-│ ├── demo_app.py # Streamlit UI 
+-│ ├── fairness_audit.py # Bias analysis
+-│  └── utils.py  #Shared functions #Python dependencies
+-├── requirements.txt  #Python dependencies
+-├── LICENSE  #MIT License
+-└── README.md 
 
 
 ---
- ⚙️ Setup & Build
- 1. Clone the repo :
-    ```bash
+ # ⚙️ Setup & Build
+## 1. Clone the repo :
+    
     git clone https://github.com/your-username/dropout-predictor.gitcd dropout-predictor
    
- 2. Create and activate virtual environment :
+## 2. Create and activate virtual environment :
     python -m venv .venv
     source .venv/Scripts/activate  # Windows Git Bash
 
- 3. Install dependencies :
+## 3. Install dependencies :
     pip install -r requirements.txt
 
- 4. Build the system (generate data + train model) :
+## 4. Build the system (generate data + train model) :
     python src/generate_data.py && python src/train.py
 
 
-🧪 Run the Demo
+## 🧪 Run the Demo
 🔌 Start the API:
  python -m uvicorn src.service:app --reload --host 0.0.0.0 --port 8000
 
 
- 🖥️ Launch the UI : 
+## 🖥️ Launch the UI : 
  python -m streamlit run src/demo_app.py
 
 
- 📊 Fairness Audit (Optional) :
+ ## 📊 Fairness Audit (Optional) :
  python src/fairness_audit.py
 
 
-📜 License
+## 📜 License
  This project is licensed under the MIT License. You are free to use, modify, and distribute this software with proper attribution.
 
 
 
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 Developed by Team Urecon.
 Project Name: CARRO – Counselling-Aware Risk and Retention Optimizer
 Smart India Hackathon 2025 – Software Edition
