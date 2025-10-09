@@ -69,6 +69,6 @@ An explainable, counselling-aware early warning system to predict student dropou
 
 
 ## 🙌 Acknowledgements
-Developed by Team Urecon.
-Project Name: CARRO – Counselling-Aware Risk and Retention Optimizer
-Smart India Hackathon 2025 – Software Edition
+- Developed by Team Urecon.
+- Project Name: CARRO – Counselling-Aware Risk and Retention Optimizer
+- Smart India Hackathon 2025 – Software Edition
